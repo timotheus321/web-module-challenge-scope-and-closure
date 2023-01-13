@@ -60,7 +60,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 
 Edit the `ReadMe` file with your answers to the questions below.
 
-1. In your own words, define closure (1-2 sentences).
+1. In your own words, define closure (1-2 sentences). closure allows you to use the outer scope of the function, existing variables in the function scope  when youre using a inner function.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -76,14 +76,17 @@ const dansRoll = personalDice("Dan");
 
 const zoesRoll = personalDice("Zoe");
 
-
-dansRoll();
-dansRoll();
+//why when i console.log it am i not getting an output?
+//dansRoll();
+//dansRoll();
+console.log(dansRoll);
 ```
 
-a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+a. Where is closure used in this code? How can you tell? name is able to be used inside the innerfunction. new roll, its only accessible inside the return function
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change? the dice will roll a random number between 1-6 the only difference will be the number rolled
+
 c. What is the lexical scope of `newRoll`? 
+Its only accessible inside the return function
 
 
 ### Task 3 - Stretch Goals
