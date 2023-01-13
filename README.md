@@ -104,7 +104,9 @@ addSix(21); // returns 27
 ```
 
 2. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
+the pros of functional programming is it attempts to avoid changing state and mutable data pros efficiency, lazy evaluations, nested functions, parallel programming. recursion is used for iterative data.
 
+object oriented programming nased on the concepts of objects, object uses mutable date, onject oriented programming does follow imperative programming model. object doesnt foucus on parallel programming, loops are used for iterative data
 ## Resources
 
 📚 [Scope and Closures Guide](https://css-tricks.com/javascript-scope-closures/)

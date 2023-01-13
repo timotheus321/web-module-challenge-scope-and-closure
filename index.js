@@ -92,12 +92,12 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(randomInning, numInning){
+function finalScore(randomInningcb, numInning){
     let home = 0;
     let away = 0;
     for(let i = 0; i <= numInning; i++){
-      home = home + randomInning();
-      away = home + randomInning();
+      home = home + randomInningcb();
+      away = home + randomInningcb();
 
     }
     return {
@@ -174,16 +174,25 @@ Use the scoreboard function below to do the following:
   "This game will require extra innings: Away 10 - Home 10"
 ] */
 // NOTE: There is no test associated with this code; if your output matches the given example, consider it complete!
-function scoreboard( numinnings) {
-   for(let i =0; i < numinnings;i++){
-     
+function scoreboard(inningScoreCB, inningCB, numInnings) {
+   const scorebyInning = [];
+   let homeScore = 0;
+   let awayScore = 0;
+  for(let i =0; i < numInnings;i++){
+     const currentInning = inningScoreCB(inningCB);
+     homeScore = homeScore + currentInning.Home
+     awayScore = awayScore + currentInning.Away
+     scorebyInning.push(`Inning ${i + 1}: Away ${currentInning.Away} - Home ${currentInning.Home}`)
+   }
+   if(homeScore === awayScore){
+    scorebyInning.push(`This game will require extra innings: Away ${currentInning.Away} - Home ${currentInning.Home}`)
+   }else{
+    scorebyInning.push(`Final Score: Away: ${awayScore} - Home ${homeScore}`);
    }
   
-  //  return
-  //  const newinning = ["Inning 2: Away 2 - Home 1"],
-
 }
-scoreboard(10);
+
+console.log('Task 4:', scoreboard(getInningScore, inning, 9));
 
 
 
